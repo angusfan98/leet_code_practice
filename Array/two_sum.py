@@ -23,7 +23,6 @@ Example 3:
 
 Input: nums = [3,3], target = 6
 Output: [0,1]
-
 '''
 
 def twoSum(arr,target):
