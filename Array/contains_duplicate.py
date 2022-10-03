@@ -32,6 +32,7 @@ def test_containsDuplicate():
     assert containsDuplicate([1,2,3,4]) == False
     assert containsDuplicate([1,1,1,3,3,4,3,2,4,2]) == True
 
+
 '''
 Comments:
 '''

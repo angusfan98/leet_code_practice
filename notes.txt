@@ -1,0 +1,3 @@
+Python String Slicing: 
+    Start index:End index-1
+    Example: str = "1234", str[1:5] = "234"
