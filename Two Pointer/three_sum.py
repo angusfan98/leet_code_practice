@@ -32,4 +32,10 @@ def threeSum(nums):
     return res
     
 nums = [-1,0,1,2,-1,-4]
-print(threeSum(nums))
+nums_2 = [0,1,1]
+nums_3 = [0,0,0]
+
+def test_threesum():
+    assert threeSum(nums) == [[-1,-1,2],[-1,0,1]]
+    assert threeSum(nums_2) == []
+    assert threeSum(nums_3) == [[0,0,0]]

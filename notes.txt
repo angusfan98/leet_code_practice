@@ -1,3 +1,140 @@
 Python String Slicing: 
-    Start index:End index-1
+    Start index:End index(not included)
     Example: str = "1234", str[1:5] = "234"
+
+Variables:
+    - Python is dynamically typed language
+        - Do not have to declare types
+            - determined at runtime
+    - Can do multiple assignments
+        - eg: n,m = 0, "abc" (can have multiple types)
+    - Increments
+        - n = n + 1
+        - n += 1
+        - cannot do n++
+    - None is null
+
+If statements:
+    - don't need parentheses
+        - use identation
+    - elif
+    - parentheses needed for multi-line conditions
+    - and = &&
+    - or = ||
+
+For loops:
+    - reverse example: for i in range(5,1,-1)
+        - looping from i = 5 to i = 2
+
+Division:
+    - decimal division by default
+        - eg: 5/2 = 2.5
+    - double slash rounds down
+    - most languages round towards 0 by default so negative numbers will round down but python opposite
+        - eg: -3//2 = -2
+        - use decimal division converting to integer
+
+Modulo:
+    - import math and use fmod to be consitent with other languages
+
+Math helpers:
+    - floor round down
+    - ceil round up 
+    - sqrt 
+    - pow
+    - Max integer = float("inf")
+    - Min integer = float("-inf")
+    - Python numbers are infinite so they never overflow
+
+Arrays:
+    - called lists in python
+    - dynamic arrays by default
+    - can be used as a stack
+    - can insert into the middle using (insert) but is O(n)
+    - index an array is constant time 
+        - eg: arr[3] = 0
+    - indexing -1 is the last value
+    - slicing using :
+    - unpacking
+        - eg: a,b,c = [1,2,3]
+    - enumerate for both the index and value 
+    - arr.reverse()
+
+Sort:
+    - arr.sort()
+    - arr.sort(reverse=True)
+    - sort a list of strings based on alphabetical order
+        - can change to custom
+            - eg (by length): arr.sort(key=lambda x: len(x))
+
+List comprehension:
+    - arr = [i+i for i in range(5)]
+        - [0,2,4,6,8]
+    
+2-D arrays:
+    - arr = [[0] * 4 for in range(4)]
+    - don't do arr[[0]*4]*4 
+        - it will change all when you change one
+
+Strings:
+    - can slice similar to arrays
+    - they are immutable
+        - cannot reassign at index
+    - can update a string but this creates a new string 
+    - any time you change a string it is a n time operation
+    - strings can be converted to integers and vice versa
+    - ASCII value of a character
+        - ord("a") = 97
+        - ord("b") = 98
+    - combine a list of strings (with an empty string delimitor)
+        - strings = ["ab","cd","ef"]
+            - ("".join(strings)) = abcdef
+
+Queue:
+    - from colelctions import deque
+    - queue = deque()
+    - queue.append()
+    - queue.popleft()
+        - constant time
+    - queue.appendleft()
+    - queue.pop()
+
+HashSet:
+    - can search in constant time
+    - can insert in constant time
+    - won't be any duplicates
+    - mySet = {i for i in range(5)}
+
+HashMap:
+    - can search for key in constant time
+    - can remove key which removes value
+    - Looping through maps:
+        - for key in myMap:
+            print(key,myMap[key])
+        - for val in myMap.values():
+            print(val)
+        - for key,val in myMap.items():
+            print(key,val)
+
+Tuples:
+    - like arrays but immutable
+    - uses () instead of []
+    - mainly used as keys for HashMap or HashSet
+        - lists cannot be keys
+    
+Heaps:
+    - import heapq
+    - find min and max of a set of value
+    - under the hood are arrays 
+    - minHeap = []
+        - heapq.heappush(minHeap,3)
+    - min is always at index 0
+        - minHeap[0]
+    - no max heap by default   
+        - to use min heap and multiply by -1 when push & pop
+    - if you have initial set of values you want to build heap by 
+        - heapq.heapify(arr)
+        - linear time
+
+
+        
